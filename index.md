@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# Bluetooth Controlled Robot
 
-You can use the [editor on GitHub](https://github.com/Lmanangka/bluetooth-controlled-robot/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Controlling robot using android device
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Requirements
 
-### Markdown
+* Arduino(Nano, UNO, Mini)
+* Bluetooth module(HC-05/HC-06)
+* Driver Motor L298N
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Block Diagram
+![Image of Block Diagram](https://github.com/Lmanangka/bluetooth-controlled-robot/blob/master/img/Block-Diagram.jpg?raw=true)
 
-```markdown
-Syntax highlighted code block
+Arduino -----------> Driver Motor
+* D3 --------------> IN1
+* D9 --------------> IN2
+* D10 -------------> IN3
+* D11 -------------> IN4
+* GND -------------> GND
+* VIN -------------> 5V
 
-# Header 1
-## Header 2
-### Header 3
+for arduino [analogWrite](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/) reference
 
-- Bulleted
-- List
+## How To Use It
+* Install **android-app**
+* Upload **robot.ino** to Arduino
+* Run app and connect to robot via Bluetooth
 
-1. Numbered
-2. List
+## Author
+[**Leonardo Rudolf Manangka**](https://github.com/Lmanangka)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Lmanangka/bluetooth-controlled-robot/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Reference
+* [Datasheet L298N](https://www.google.com/url?sa=t&source=web&rct=j&url=http://www.handsontec.com/dataspecs/L298N%2520Motor%2520Driver.pdf&ved=2ahUKEwjVpLyErMXuAhVO63MBHfWYCNIQFjABegQIARAB&usg=AOvVaw3RqKatlWCx_OOcg_CK8P5W&cshid=1612067959648)
